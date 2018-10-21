@@ -1,0 +1,10 @@
+{
+  "reportType" : "accounting",
+  "productInstanceReference" : "PIR724626245",
+  "penalties" : "$1000",
+  "loanFees" : "$500",
+  "collateralValuation" : "$400000",
+  "loanFeeType" : "range of fees possible for different actions",
+  "loanTaxReport" : "loan tax report",
+  "productFulfillmentSchedule" : "tasks, e.g. reporting and loan review actions"
+}

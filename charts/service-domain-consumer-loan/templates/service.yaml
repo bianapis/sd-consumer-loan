@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "service-domain-consumer-loan.fullname" . }}
+  labels:
+    app: {{ template "service-domain-consumer-loan.name" . }}
+    chart: {{ template "service-domain-consumer-loan.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "service-domain-consumer-loan.name" . }}
+    release: {{ .Release.Name }}
